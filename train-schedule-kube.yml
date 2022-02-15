@@ -34,8 +34,6 @@ spec:
         image: linuxacademycontent/train-schedule:autoscaling
         ports:
         - containerPort: 8080
-        livenessProbe:
-          httpGet:
         resources: 
           requests:
             cpu: 200m
