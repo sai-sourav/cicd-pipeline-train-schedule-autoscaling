@@ -36,6 +36,10 @@ spec:
         - containerPort: 8080
         livenessProbe:
           httpGet:
+        resources: 
+          requests:
+            cpu: 200m
+          
 ---
 
 apiVersion: autoscaling/v2beta1
@@ -58,10 +62,11 @@ spec:
             path: /
             port: 8080
           initialDelaySeconds: 15
-          timeoutSeconds: 1resources:
-        requests:
-          cpu: 200m
-          periodSeconds: 10
+          timeoutSeconds: 1
+          resources:
+            requests:
+            cpu: 200m
+            periodSeconds: 10
           
           
           
