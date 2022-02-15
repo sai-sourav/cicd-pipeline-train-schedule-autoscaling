@@ -59,10 +59,6 @@ spec:
     resource:
       name: cpu
       targetAverageUtilization: 50
-            path: /
-            port: 8080
-          initialDelaySeconds: 15
-          timeoutSeconds: 1
-                   
+                              
           
           
